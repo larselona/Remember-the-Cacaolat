@@ -1,6 +1,6 @@
 # Remember-the-Cacaolat
 
-A simple list app.
+A simple Todolist app.
 
 Persistancy through:
 - Core Data

@@ -16,6 +16,7 @@
 		FA0430DA25EBC35800391EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0430D825EBC35800391EC2 /* LaunchScreen.storyboard */; };
 		FA0430E525EBC35900391EC2 /* Remember_the_CacaolatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430E425EBC35900391EC2 /* Remember_the_CacaolatTests.swift */; };
 		FA0430F025EBC35900391EC2 /* Remember_the_CacaolatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430EF25EBC35900391EC2 /* Remember_the_CacaolatUITests.swift */; };
+		FA04310D25EBEC9C00391EC2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA04310C25EBEC9B00391EC2 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FA0430EB25EBC35900391EC2 /* Remember the CacaolatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Remember the CacaolatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0430EF25EBC35900391EC2 /* Remember_the_CacaolatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remember_the_CacaolatUITests.swift; sourceTree = "<group>"; };
 		FA0430F125EBC35900391EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA04310C25EBEC9B00391EC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				FA0430D825EBC35800391EC2 /* LaunchScreen.storyboard */,
 				FA0430DB25EBC35800391EC2 /* Info.plist */,
 				FA0430D325EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld */,
+				FA04310C25EBEC9B00391EC2 /* README.md */,
 			);
 			path = "Remember the Cacaolat";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				FA0430DA25EBC35800391EC2 /* LaunchScreen.storyboard in Resources */,
 				FA0430D725EBC35800391EC2 /* Assets.xcassets in Resources */,
+				FA04310D25EBEC9C00391EC2 /* README.md in Resources */,
 				FA0430D225EBC35700391EC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
