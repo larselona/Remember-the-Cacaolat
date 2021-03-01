@@ -17,7 +17,6 @@
 		FA0430E525EBC35900391EC2 /* Remember_the_CacaolatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430E425EBC35900391EC2 /* Remember_the_CacaolatTests.swift */; };
 		FA0430F025EBC35900391EC2 /* Remember_the_CacaolatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430EF25EBC35900391EC2 /* Remember_the_CacaolatUITests.swift */; };
 		FA04310D25EBEC9C00391EC2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA04310C25EBEC9B00391EC2 /* README.md */; };
-		FA04311525EC0BCC00391EC2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04311425EC0BCC00391EC2 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		FA0430EF25EBC35900391EC2 /* Remember_the_CacaolatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remember_the_CacaolatUITests.swift; sourceTree = "<group>"; };
 		FA0430F125EBC35900391EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA04310C25EBEC9B00391EC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		FA04311425EC0BCC00391EC2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +110,6 @@
 				FA04311325EC0B8200391EC2 /* Controllers */,
 				FA04311C25EC0BF700391EC2 /* Supporting files */,
 				FA0430DB25EBC35800391EC2 /* Info.plist */,
-				FA0430D325EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld */,
 				FA04310C25EBEC9B00391EC2 /* README.md */,
 			);
 			path = "Remember the Cacaolat";
@@ -139,7 +136,7 @@
 		FA04311125EC0B6F00391EC2 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA04311425EC0BCC00391EC2 /* Item.swift */,
+				FA0430D325EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA04311525EC0BCC00391EC2 /* Item.swift in Sources */,
 				FA0430D525EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld in Sources */,
 				FA0430CF25EBC35700391EC2 /* TodoListViewController.swift in Sources */,
 				FA0430CB25EBC35700391EC2 /* AppDelegate.swift in Sources */,
