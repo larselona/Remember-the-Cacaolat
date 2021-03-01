@@ -17,6 +17,7 @@
 		FA0430E525EBC35900391EC2 /* Remember_the_CacaolatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430E425EBC35900391EC2 /* Remember_the_CacaolatTests.swift */; };
 		FA0430F025EBC35900391EC2 /* Remember_the_CacaolatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430EF25EBC35900391EC2 /* Remember_the_CacaolatUITests.swift */; };
 		FA04310D25EBEC9C00391EC2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA04310C25EBEC9B00391EC2 /* README.md */; };
+		FA3F3C9A25ED67B0002B1F96 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3C9925ED67B0002B1F96 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FA0430EF25EBC35900391EC2 /* Remember_the_CacaolatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remember_the_CacaolatUITests.swift; sourceTree = "<group>"; };
 		FA0430F125EBC35900391EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA04310C25EBEC9B00391EC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		FA3F3C9925ED67B0002B1F96 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0430CE25EBC35700391EC2 /* TodoListViewController.swift */,
+				FA3F3C9925ED67B0002B1F96 /* CategoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3F3C9A25ED67B0002B1F96 /* CategoryViewController.swift in Sources */,
 				FA0430D525EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld in Sources */,
 				FA0430CF25EBC35700391EC2 /* TodoListViewController.swift in Sources */,
 				FA0430CB25EBC35700391EC2 /* AppDelegate.swift in Sources */,

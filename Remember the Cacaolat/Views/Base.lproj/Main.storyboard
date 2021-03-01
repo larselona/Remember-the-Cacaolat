@@ -7,6 +7,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="KsX-QE-Kav">
+            <objects>
+                <tableViewController id="wex-jw-z87" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8zu-Sw-Dx8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ThC-x3-g8v">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ThC-x3-g8v" id="KCe-be-6OI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wex-jw-z87" id="KqB-Hi-vSn"/>
+                            <outlet property="delegate" destination="wex-jw-z87" id="AdJ-Tr-YVx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="zMV-WQ-78v"/>
+                    <connections>
+                        <segue destination="qvg-BE-LWx" kind="show" identifier="goToItems" id="vGF-yE-Mop"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9C-wY-CwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="11"/>
+        </scene>
         <!--Remember the Cacaolat-->
         <scene sceneID="hHB-nH-4bO">
             <objects>
@@ -49,7 +81,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZg-1R-Ezz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.1304347826087" y="93.75"/>
+            <point key="canvasLocation" x="2239" y="12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VLS-Zi-oDZ">
@@ -66,12 +98,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qvg-BE-LWx" kind="relationship" relationship="rootViewController" id="6Ia-eo-YJt"/>
+                        <segue destination="wex-jw-z87" kind="relationship" relationship="rootViewController" id="prg-KS-drk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB3-ki-duh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.98550724637687" y="93.75"/>
+            <point key="canvasLocation" x="251" y="12"/>
         </scene>
     </scenes>
     <resources>

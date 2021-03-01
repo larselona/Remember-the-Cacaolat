@@ -129,10 +129,10 @@ extension TodoListViewController: UISearchBarDelegate {
         if searchBar.text?.count == 0 {
             loadItems()
             
+            // Retires the keyboard after the search field has been cleared
             DispatchQueue.main.async {
                 searchBar.resignFirstResponder()
             }
-            
         }
     }
     
