@@ -4,4 +4,5 @@ A simple Todolist app.
 
 Persistancy through:
 - Core Data
+- Realm
 - userdefaults
