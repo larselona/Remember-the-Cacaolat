@@ -181,8 +181,8 @@
 		FA04311325EC0B8200391EC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA0430CE25EBC35700391EC2 /* TodoListViewController.swift */,
 				FA3F3C9925ED67B0002B1F96 /* CategoryViewController.swift */,
+				FA0430CE25EBC35700391EC2 /* TodoListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
