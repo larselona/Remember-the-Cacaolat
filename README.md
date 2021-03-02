@@ -4,4 +4,3 @@ A simple Todolist app.
 
 Persistancy through:
 - Core Data
-- userdefaults
