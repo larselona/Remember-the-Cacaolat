@@ -1,38 +1,39 @@
  //
-//  CategoryViewController.swift
-//  Remember the Cacaolat
-//
-//  Created by Lars Isdahl on 01/03/2021.
-//
-
-import UIKit
-import CoreData
+ //  CategoryViewController.swift
+ //  Remember the Cacaolat
+ //
+ //  Created by Lars Isdahl on 01/03/2021.
+ //
  
-class CategoryViewController: UITableViewController {
+ import UIKit
+ import RealmSwift
+ 
+ class CategoryViewController: UITableViewController {
     
-    //Fill the list with the static values from the array
+    let realm = try! Realm()
+  
     var categories = [Category]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       loadCategories()
+        
+        loadCategories()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     // MARK: - TableView Datasource Methods
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
@@ -56,27 +57,31 @@ class CategoryViewController: UITableViewController {
         }
     }
     //MARK: - Data Manipulation Methods
-   
-    func saveCategories() {
+    
+    func save(category: Category) {
         do{
-        try context.save()
+            try realm.write{
+                realm.add(category)
+            }
         } catch {
             print("Error saving category \(error)")
         }
-    
+        
         tableView.reloadData()
         
     }
     
     func loadCategories() {
         
-        let request : NSFetchRequest<Category> = Category.fetchRequest()
-        
-        do {
-        categories = try context.fetch(request)
-        } catch {
-            print("Error loading categories \(error)")
-        }
+//        let request : NSFetchRequest<Category> = Category.fetchRequest()
+//        
+//        do {
+//            categories = try context.fetch(request)
+//        } catch {
+//            print("Error loading categories \(error)")
+//        }
+//        
+//        tableView.reloadData()
     }
     
     //MARK: - Add New Categories
@@ -88,13 +93,13 @@ class CategoryViewController: UITableViewController {
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
-        
-            let newCategory = Category(context: self.context)
+            
+            let newCategory = Category()
             newCategory.name = textField.text!
             
             self.categories.append(newCategory)
             
-            self.saveCategories()
+            self.save(category: newCategory)
         }
         
         alert.addAction(action)
@@ -108,9 +113,9 @@ class CategoryViewController: UITableViewController {
         
     }
     
-
-    
-  
     
     
-}
+    
+    
+    
+ }

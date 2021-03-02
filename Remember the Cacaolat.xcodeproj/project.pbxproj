@@ -12,13 +12,14 @@
 		FA0430CD25EBC35700391EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430CC25EBC35700391EC2 /* SceneDelegate.swift */; };
 		FA0430CF25EBC35700391EC2 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430CE25EBC35700391EC2 /* TodoListViewController.swift */; };
 		FA0430D225EBC35700391EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0430D025EBC35700391EC2 /* Main.storyboard */; };
-		FA0430D525EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA0430D325EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld */; };
 		FA0430D725EBC35800391EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0430D625EBC35800391EC2 /* Assets.xcassets */; };
 		FA0430DA25EBC35800391EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0430D825EBC35800391EC2 /* LaunchScreen.storyboard */; };
 		FA0430E525EBC35900391EC2 /* Remember_the_CacaolatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430E425EBC35900391EC2 /* Remember_the_CacaolatTests.swift */; };
 		FA0430F025EBC35900391EC2 /* Remember_the_CacaolatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0430EF25EBC35900391EC2 /* Remember_the_CacaolatUITests.swift */; };
 		FA04310D25EBEC9C00391EC2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA04310C25EBEC9B00391EC2 /* README.md */; };
 		FA3F3C9A25ED67B0002B1F96 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3C9925ED67B0002B1F96 /* CategoryViewController.swift */; };
+		FA7FBF1725EEA9110038C75D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FBF1625EEA9110038C75D /* Item.swift */; };
+		FA7FBF1C25EEA9250038C75D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FBF1B25EEA9250038C75D /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,6 @@
 		FA0430CC25EBC35700391EC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA0430CE25EBC35700391EC2 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		FA0430D125EBC35700391EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA0430D425EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Remember_the_Cacaolat.xcdatamodel; sourceTree = "<group>"; };
 		FA0430D625EBC35800391EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0430D925EBC35800391EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0430DB25EBC35800391EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		FA0430F125EBC35900391EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA04310C25EBEC9B00391EC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		FA3F3C9925ED67B0002B1F96 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		FA7FBF1625EEA9110038C75D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FA7FBF1B25EEA9250038C75D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,6 @@
 				8A0630A3FFF1B351FED067BE /* Pods-Remember the Cacaolat.debug.xcconfig */,
 				8A9B7E1BFF68E43DD9D9121D /* Pods-Remember the Cacaolat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -163,7 +164,8 @@
 		FA04311125EC0B6F00391EC2 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA0430D325EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld */,
+				FA7FBF1B25EEA9250038C75D /* Category.swift */,
+				FA7FBF1625EEA9110038C75D /* Item.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -370,10 +372,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3F3C9A25ED67B0002B1F96 /* CategoryViewController.swift in Sources */,
-				FA0430D525EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld in Sources */,
 				FA0430CF25EBC35700391EC2 /* TodoListViewController.swift in Sources */,
 				FA0430CB25EBC35700391EC2 /* AppDelegate.swift in Sources */,
+				FA7FBF1725EEA9110038C75D /* Item.swift in Sources */,
 				FA0430CD25EBC35700391EC2 /* SceneDelegate.swift in Sources */,
+				FA7FBF1C25EEA9250038C75D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,19 +711,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FA0430D325EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FA0430D425EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodel */,
-			);
-			currentVersion = FA0430D425EBC35700391EC2 /* Remember_the_Cacaolat.xcdatamodel */;
-			path = Remember_the_Cacaolat.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FA0430BF25EBC35700391EC2 /* Project object */;
 }
