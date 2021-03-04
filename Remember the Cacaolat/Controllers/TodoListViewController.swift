@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import SwipeCellKit
 
 class TodoListViewController: UITableViewController {
     //Fill the list with the static values from the array
