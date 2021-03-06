@@ -47,6 +47,7 @@
             cell.backgroundColor = categoryColour
             cell.textLabel?.textColor = ContrastColorOf(categoryColour, returnFlat: true)
         }
+        // return cell here
         return cell
     }
     
