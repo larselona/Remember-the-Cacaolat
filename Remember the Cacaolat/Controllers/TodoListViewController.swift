@@ -13,6 +13,11 @@ class TodoListViewController: SwipeTableViewController {
     //Fill the list with the static values from the array
     var toDoItems: Results<Item>?
     let realm = try! Realm()
+    
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
     var selectedCategory: Category? {
         didSet {
             loadItems()
@@ -23,8 +28,25 @@ class TodoListViewController: SwipeTableViewController {
         super.viewDidLoad()
         
         tableView.separatorStyle = .none
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if let colourHex = selectedCategory?.colour {
+            title = selectedCategory!.name
+            guard let navBar = navigationController?.navigationBar else { fatalError("Navigation controller does not exist.")
+            }
+            if let navBarColour = UIColor(hexString: colourHex) {
+                //Original setting: navBar.barTintColor = UIColor(hexString: colourHex)
+                //Revised for iOS13 w/ Prefer Large Titles setting:
+                navBar.backgroundColor = navBarColour
+                navBar.tintColor = ContrastColorOf(navBarColour, returnFlat: true)
+               // navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColour, returnFlat: true)]
+                searchBar.barTintColor = navBarColour
+            }
+        }
+    }
     // MARK: - Tableview Datasource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,20 +56,13 @@ class TodoListViewController: SwipeTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        
         if let item = toDoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
-            
             if let colour = UIColor(hexString: selectedCategory!.colour)?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(toDoItems!.count)) {
                 cell.backgroundColor = colour
                 cell.textLabel?.textColor = ContrastColorOf(colour, returnFlat: true)
             }
-//            print("version 1: \(CGFloat(indexPath.row / toDoItems!.count))")
-//            print("version 2: \(CGFloat(indexPath.row) / CGFloat(toDoItems!.count))")
-          
-            
             cell.accessoryType = item.done ? .checkmark : .none
-            
         } else {
             cell.textLabel?.text = "No Items Added"
         }
